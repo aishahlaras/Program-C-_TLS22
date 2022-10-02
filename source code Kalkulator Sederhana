@@ -1,0 +1,40 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    char op;
+    double nilai1, nilai2;
+    
+    cout << "Masukkan Operasi (+,-,*,/) = ";
+    cin >> op;
+    
+    cout << "Masukkan dua angka (satu per satu) = ";
+    cin >> nilai1 >> nilai2;
+    
+    switch (op){
+        
+        case '+':
+            cout << nilai1 << "+" << nilai2 << "=" << (nilai1+nilai2);
+            break; 
+        
+        case '-':
+            cout << nilai1 << "-" << nilai2 << "=" << (nilai1-nilai2);
+            break; 
+            
+        case '*':
+            cout << nilai1 << "*" << nilai2 << "=" << (nilai1*nilai2);
+            break; 
+            
+        case '/':
+            if (nilai2 != 0.0)
+                cout << nilai1 << "/" << nilai2 << "=" << (nilai1/nilai2);
+            else 
+                cout << "ERROR: Pembagian dengan Nol";
+            break;
+        default:
+            cout << op << " operasi merupakan tidak valid ";
+    }
+
+    return 0;
+}
